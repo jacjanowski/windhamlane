@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Windhame Lane</title>
+    <style>
+      @font-face {
+        font-family: Fiona-Regular;
+        src: url("./Fiona-Regular.ttf") format("truetype");
+      }
+      
+
+      html {
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("./windhamlane-background.jpg");
+        background-size: cover;
+      }
+
+      * {
+        font-family: "Fiona-Regular", sans-serif;
+        margin: 0;
+      }
+
+      .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background: linear-gradient(
+            0deg,
+            rgba(0, 0, 0, 0.795),
+            rgba(0, 0, 0, 0.3)
+          ),
+          url("./windhamlane-background.jpg");
+
+        background-size: contain;
+        background-position: top;
+        background-repeat: no-repeat;
+        flex-direction: column;
+        text-align: center;
+      }
+      h1 {
+        letter-spacing: 10px;
+        color: whitesmoke;
+        font-size: 7em;
+        font-family: "Fiona-Regular", sans-serif;
+        font-size: clamp(2.375rem, 3.349vw + 1.509rem, 4.188rem);
+        line-height: clamp(3.563rem, 3.476vw + 2.663rem, 5.444rem);
+      }
+      p {
+        font-size: 18px;
+        margin-bottom: 2em;
+      }
+      h2 {
+        color: whitesmoke;
+        font-family: "Fiona-Regular", sans-serif;
+        font-size: clamp(1.063rem, 1.27vw + 0.734rem, 1.75rem);
+        line-height: clamp(1.594rem, 1.259vw + 1.268rem, 2.275rem);
+      }
+      input,
+      button {
+        padding: 10px 15px; 
+        border-radius: 0;
+        
+      }
+      button:hover {
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: #231f20;
+        color: white;
+      }
+      .wrap-input {
+        padding: 10px 15px;
+        background-color: #231f20;
+      }
+      ::placeholder {
+        color: white;
+        
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <div class="wrap">
+      <h1>Windhame Lane</h1>
+      <p style="font-style: italic; color: gray; font-weight: 100">
+        launching soon
+      </p>
+      <form
+        action="https://formsubmit.co/gianfranco@windhamlane.com"
+        method="POST"
+      >
+        <h2>Join the newsletter</h2>
+        <div class="wrap-input">
+          <input style="background-color: #231f20;color: white;" placeholder="Email" type="email" name="email" required />
+          <button  type="submit">Send</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
