@@ -11,7 +11,7 @@
       }
       
 
-      html {
+      body {
         background: linear-gradient(
             0deg,
             rgba(0, 0, 0, 0.3),
@@ -45,6 +45,7 @@
         text-align: center;
       }
       h1 {
+          font-variant: small-caps;
         letter-spacing: 10px;
         color: whitesmoke;
         font-size: 7em;
@@ -84,12 +85,19 @@
         
       }
       
+        @media only screen and (max-width: 480px) {
+            
+            body {
+                height: 100%;
+            }
+        }
+      
     </style>
   </head>
 
   <body>
     <div class="wrap">
-      <h1>Windhame Lane</h1>
+      <h1>windham lane</h1>
       <p style="font-style: italic; color: gray; font-weight: 100">
         launching soon
       </p>
