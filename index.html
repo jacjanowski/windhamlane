@@ -30,7 +30,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        
+
         background: linear-gradient(
             0deg,
             rgba(0, 0, 0, 0.795),
@@ -58,7 +58,6 @@
         text-align: start;
         font-size: clamp(1.063rem, 0.808vw + 0.853rem, 1.5rem);
         line-height: clamp(1.594rem, 0.658vw + 1.423rem, 1.95rem);
-        
       }
       form {
         width: 400px;
@@ -89,7 +88,6 @@
         background-color: #231f20;
       }
 
-     
       .container {
         padding: 0px;
       }
@@ -112,7 +110,7 @@
       }
 
       input[type="submit"] {
-        background-color: #7D7070;
+        background-color: #7d7070;
         color: white;
         border: none;
       }
@@ -121,6 +119,12 @@
         opacity: 0.8;
         cursor: pointer;
       }
+      #success,
+      #failure {
+        font-size: 12px;
+        display: none;
+      }
+
       @media only screen and (max-width: 480px) {
         #inner-wrap {
           width: 75%;
@@ -135,32 +139,51 @@
   <body>
     <div class="wrap">
       <div id="inner-wrap">
+        <img src="./WINDHAM-LANE.png" width="100%" alt="" />
 
-      <img src="./WINDHAM-LANE.png" width="100%" alt="">
-      
-      <p style="font-style: italic; text-align: center; color: gray; font-weight: 100; margin-bottom: 40px;">
-        launching soon
-      </p>
+        <p
+          style="
+            font-style: italic;
+            text-align: center;
+            color: gray;
+            font-weight: 100;
+            margin-bottom: 40px;
+          "
+        >
+          launching soon
+        </p>
 
+        <form>
+          <div class="container">
+            <h2>Subscribe to our Newsletter</h2>
+            <p style="color: white">
+              Get updated once we go live. Big things are coming.
+            </p>
+          </div>
 
-      <form action="https://formsubmit.co/4a08e6314abc8d4311bab795a95bba0b"
-      method="POST">
-        <div class="container">
-          <h2>Subscribe to our Newsletter</h2>
-          <p style="color: white">
-            Get updated once we go live. Big things are coming.
+          <div class="container">
+            <input
+              type="text"
+              id="email"
+              placeholder="Email address"
+              name="email"
+              required
+            />
+          </div>
+
+          <div class="container">
+            <input type="submit" value="Subscribe" />
+          </div>
+          <p id="success">
+            You'll be notified once we go live.
           </p>
-        </div>
-
-        <div class="container">
-          <input type="text" placeholder="Email address" name="mail" required />
-        </div>
-
-        <div class="container">
-          <input type="submit" value="Subscribe" />
-        </div>
-      </form>
+          <p id="failure">
+            There was an error submitting the form.
+          </p>
+        </form>
+      </div>
     </div>
-  </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
   </body>
 </html>
