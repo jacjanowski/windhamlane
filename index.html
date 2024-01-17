@@ -9,7 +9,6 @@
         font-family: Fiona-Regular;
         src: url("./Fiona-Regular.ttf") format("truetype");
       }
-      
 
       body {
         background: linear-gradient(
@@ -19,7 +18,7 @@
           ),
           url("./windhamlane-background.jpg");
         background-size: cover;
-      }
+        height: 100vh;
 
       * {
         font-family: "Fiona-Regular", sans-serif;
@@ -30,7 +29,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        height: 100vh;
+        
         background: linear-gradient(
             0deg,
             rgba(0, 0, 0, 0.795),
@@ -43,9 +42,10 @@
         background-repeat: no-repeat;
         flex-direction: column;
         text-align: center;
+        height: 100%;
       }
       h1 {
-          font-variant: small-caps;
+        font-variant: small-caps;
         letter-spacing: 10px;
         color: whitesmoke;
         font-size: 7em;
@@ -54,10 +54,17 @@
         line-height: clamp(3.563rem, 3.476vw + 2.663rem, 5.444rem);
       }
       p {
-        font-size: 18px;
-        margin-bottom: 2em;
+        text-align: start;
+        font-size: clamp(1.063rem, 0.808vw + 0.853rem, 1.5rem);
+        line-height: clamp(1.594rem, 0.658vw + 1.423rem, 1.95rem);
+        
+      }
+      form {
+        width: 400px;
       }
       h2 {
+        text-align: start;
+
         color: whitesmoke;
         font-family: "Fiona-Regular", sans-serif;
         font-size: clamp(1.063rem, 1.27vw + 0.734rem, 1.75rem);
@@ -65,9 +72,9 @@
       }
       input,
       button {
-        padding: 10px 15px; 
+        width: 100%;
+        padding: 10px 15px;
         border-radius: 0;
-        
       }
       button:hover {
         cursor: pointer;
@@ -80,37 +87,76 @@
         padding: 10px 15px;
         background-color: #231f20;
       }
-      ::placeholder {
-        color: white;
-        
+
+     
+      .container {
+        padding: 0px;
       }
-      
-        @media only screen and (max-width: 480px) {
-            
-            body {
-                height: 100%;
-            }
+
+      input[type="text"],
+      input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+        font-size: 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      #inner-wrap {
+        background-color: #231f2056;
+
+        padding: 20px;
+        border-radius: 20px;
+      }
+
+      input[type="submit"] {
+        background-color: #7D7070;
+        color: white;
+        border: none;
+      }
+
+      input[type="submit"]:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+      @media only screen and (max-width: 480px) {
+        body {
+          height: 100%;
         }
-      
+      }
     </style>
   </head>
 
   <body>
     <div class="wrap">
+      <div id="inner-wrap">
+
+      
       <h1>windham lane</h1>
-      <p style="font-style: italic; color: gray; font-weight: 100">
+      <p style="font-style: italic; text-align: center; color: gray; font-weight: 100; margin-bottom: 40px;">
         launching soon
       </p>
-      <form
-        action="https://formsubmit.co/gianfranco@windhamlane.com"
-        method="POST"
-      >
-        <h2>Join the newsletter</h2>
-        <div class="wrap-input">
-          <input style="background-color: #231f20;color: white;" placeholder="Email" type="email" name="email" required />
-          <button  type="submit">Send</button>
+
+
+      <form action="https://formsubmit.co/4a08e6314abc8d4311bab795a95bba0b"
+      method="POST">
+        <div class="container">
+          <h2>Subscribe to our Newsletter</h2>
+          <p style="color: white">
+            Get updated once we go live. Big things are coming.
+          </p>
+        </div>
+
+        <div class="container">
+          <input type="text" placeholder="Email address" name="mail" required />
+        </div>
+
+        <div class="container">
+          <input type="submit" value="Subscribe" />
         </div>
       </form>
     </div>
+  </div>
   </body>
 </html>
