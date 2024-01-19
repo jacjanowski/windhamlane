@@ -4,6 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Windhame Lane</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-6BQCNTX461"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-6BQCNTX461");
+    </script>
     <style>
       @font-face {
         font-family: Fiona-Regular;
@@ -156,9 +176,7 @@
         <form>
           <div class="container">
             <h2>Subscribe to our Newsletter</h2>
-            <p style="color: white">
-              Get updated once we go live. Big things are coming.
-            </p>
+            <p style="color: white">Get updated once we go live.</p>
           </div>
 
           <div class="container">
@@ -174,12 +192,8 @@
           <div class="container">
             <input type="submit" value="Subscribe" />
           </div>
-          <p id="success">
-            You'll be notified once we go live.
-          </p>
-          <p id="failure">
-            There was an error submitting the form.
-          </p>
+          <p id="success">You'll be notified once we go live.</p>
+          <p id="failure">There was an error submitting the form.</p>
         </form>
       </div>
     </div>
